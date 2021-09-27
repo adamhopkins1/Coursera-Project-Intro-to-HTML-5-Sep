@@ -1,0 +1,173 @@
+<div>
+<strong>PLEASE READ:I used open source code from w3Schools.org for the "About Me" Box I have attempted to cite the code to attribute the website that
+    was used for research and techinical purposes. The following contains the attributed code resource.Thank you.</strong>
+    <br>
+*    <strong>Title: How to Create A Modal Box</strong>
+        <br>
+*    <strong>Author:Refsnes Data</strong>
+        <br>
+*    <strong>Date:1999-2021</strong>
+        <br>
+*    <strong>Code version: 2.0</strong>
+        <br>
+*    <strong>Availability: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal</strong>
+    <br>
+*   <strong>(Version 2.0) [Source code]. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal</strong>
+</div>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project 1-Intro to HTML 5</title>
+    <style>
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+</style>
+</head>
+<body>
+    <header>
+        <h1><strong>Adam Hopkins</strong></h1>
+    </header>
+    <section>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#info">Info</a>
+        </nav>
+    </section>
+    <br>
+    <section>
+        <h1><strong>Favorite Racing Games</strong></h1>
+        <ul>
+            <li>Gran Turismo</li>
+            <li>Forza Motorsport</li>
+            <li>Project Cars</li>
+            <li>Need For Speed</li>
+            <li>GRID</li>
+        </ul>
+    </section>
+    <section>
+        <h1><Strong>Achievements</strong></h1>
+            <label for="file">Progress in this Course:(100%)</label>
+            <progress id="file" value="100" max="100">
+            </progress>
+            <br>
+            <label for="file2">Progress in this specialization:(25%)</label>
+            <progress id="file2" value="25" max="100">
+            </progress>
+            <br>
+            <label for="file3">Progress in life goals:(34%)</label>
+            <progress id="file3" value="34" max="100">
+            </progress>
+    </section>
+    <section>
+        <h1><Strong>More About Me.</strong></h1>
+            <br>
+            <i class="fas fa-caret-down"></i>About Myself.<p>I am currently a customer service rep that is looking to make the switch to
+                    Web Development. I have worked on making projects in HTML, CSS, and little to some Javascript,
+                    but I have made some examples of work that was made in bootstrap framework. I also am in the process of learning
+                    about React to add alongside my basic knowledge I've gained in HTML,CSS, and Javascript so far.I am optimistic that
+                    if I continue to work on these lesssons and apply what I learned it will pay off in the long run.</p>
+                </button>
+            </section>
+             
+            <article>
+                
+               <button id="myBtn">About Me</button>
+
+                <div id="myModal" class="modal">
+
+                
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>I am currently working as a Customer Service Rep that is looking to make the switch to
+        Front-End Web Development. I have worked on making projects in HTML, CSS, and little to some Javascript,
+        but I have made some examples of work that was made in bootstrap framework. I also am in the process of learning
+        about React to add alongside my basic knowledge I've gained in HTML,CSS, and Javascript so far.I am optimistic that
+        if I continue to work on these lesssons and apply what I learned it will pay off in the long run.</p>
+                </button></p>
+                </div>
+
+                </div>
+
+                <br>
+
+
+            <figcaption>
+                <img src="https://intro-webdesign.com/images/newlogo.png" alt="characters">
+            </figcaption>
+                
+            <script>
+            
+            var modal = document.getElementById("myModal");
+            
+            
+            var btn = document.getElementById("myBtn");
+            
+           
+            var span = document.getElementsByClassName("close")[0];
+            
+            
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+           
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+                </body>
+                </html>
